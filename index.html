@@ -14,6 +14,17 @@ eleventyExcludeFromCollections: true
 {%- endfor -%}
 </ul>
 
+<h2>Latest 3 Tasks</h2>
+<ul>
+{% for task in collections.lastThreeTasks %}
+  <li class="is-done-{{task.data.is_done}}">
+    {{ task.date toISOString }}
+    {{ task.data.title }}
+  </li>
+{% endfor %}
+</ul>
+<p><a href="/tasks">All tasks</a></p>
+
 <h2>Schedules</h2>
 <ul>
 {%- for schedule in collections.schedule -%}
