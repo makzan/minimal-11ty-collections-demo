@@ -1,6 +1,7 @@
 ---
 title: Introducing HTML5
 where: Home
+tags: Home
 rating: 3
 ---
 

@@ -15,27 +15,8 @@ eleventyExcludeFromCollections: true
 </ul>
 
 <h2>Book List</h2>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Where</th>
-    <th>Rating</th>
-    <th>Summary</th>
-  </tr>
-  {% for book in collections.book %}
-  <tr>
-    <td>
-      <a href="{{book.url}}">
-        {{ book.data.title }}
-      </a>
-    </td>
-    <td>{{ book.data.where }}</td>
-    <td>{{ book.data.rating }}</td>
-    <td>{{ book.templateContent }}</td>
-  </tr>
-  {% endfor %}
-
-</table>
+{% assign books = collections.book %}
+{% include book_list.html %}
 
 <h2>Schedules</h2>
 <ul>

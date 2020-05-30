@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Where</th>
+    <th>Rating</th>
+    <th>Summary</th>
+  </tr>
+  {% for book in books %}
+  <tr>
+    <td>
+      <a href="{{book.url}}">
+        {{ book.data.title }}
+      </a>
+    </td>
+    <td>
+      <a href="/books-at-{{book.data.where}}/">
+        {{ book.data.where }}
+      </a>
+    </td>
+    <td>{{ book.data.rating }}</td>
+    <td>{{ book.templateContent }}</td>
+  </tr>
+  {% endfor %}
+</table>
